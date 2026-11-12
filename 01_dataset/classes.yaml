@@ -1,0 +1,43 @@
+# ==============================================================================
+# CE340 — DATA CONTRACT: 12 LỚP BIỂN BÁO GIAO THÔNG ĐƯỜNG BỘ VIỆT NAM (QCVN 41:2019/BGTVT)
+# Chuẩn YOLO (class_id cố định 0..11 dùng chung cho Dataset, Training, TinyML và Firmware)
+#
+# LƯU Ý ÁNH XẠ MÃ QCVN 41:2019/BGTVT KHI LỌC DATASET CÔNG KHAI:
+#   - Cấm rẽ trái:  QCVN chuẩn là P.123a (trong Đề cương ghi nhầm thành P.103a)
+#   - Cấm rẽ phải:  QCVN chuẩn là P.123b (trong Đề cương ghi nhầm thành P.103b)
+#   - Cấm xe mô tô: QCVN chuẩn là P.104 (P.111a là Cấm xe gắn máy)
+# => Bắt buộc ánh xạ theo Ý NGHĨA & HÌNH DẠNG BIỂN BÁO, không lọc máy móc theo mã chữ.
+# ==============================================================================
+
+nc: 12
+imgsz_edge_mcu: 160       # Đề xuất cho ESP32-S3 (hoặc 192) để đạt mục tiêu <150ms / >=10-15 FPS
+imgsz_benchmark: 320      # Độ phân giải đối chứng benchmark trên GPU / Raspberry Pi
+
+names:
+  0: cam_di_nguoc_chieu   # P.102  — Cấm đi ngược chiều
+  1: cam_re_trai          # P.123a — Cấm rẽ trái (Đề cương tham chiếu P.103a)
+  2: cam_re_phai          # P.123b — Cấm rẽ phải (Đề cương tham chiếu P.103b)
+  3: cam_quay_dau         # P.124a — Cấm quay đầu xe
+  4: cam_xe_mo_to         # P.104 / P.111a — Cấm xe mô tô / xe gắn máy
+  5: huong_di_thang       # R.301a — Hướng đi thẳng phải theo
+  6: vong_xuyen           # R.303  — Nơi giao nhau chạy theo vòng xuyến
+  7: toc_do_40            # P.127  — Tốc độ tối đa cho phép 40 km/h
+  8: toc_do_50            # P.127  — Tốc độ tối đa cho phép 50 km/h
+  9: toc_do_60            # P.127  — Tốc độ tối đa cho phép 60 km/h
+  10: giao_nhau_den_tin_hieu  # W.209 — Giao nhau có tín hiệu đèn
+  11: di_cham             # W.245  — Đi chậm
+
+class_metadata:
+  0: { qcvn: "P.102",  group: "cam",       alert_level: "high",   vi: "Cấm đi ngược chiều" }
+  1: { qcvn: "P.123a", group: "cam",       alert_level: "high",   vi: "Cấm rẽ trái" }
+  2: { qcvn: "P.123b", group: "cam",       alert_level: "high",   vi: "Cấm rẽ phải" }
+  3: { qcvn: "P.124a", group: "cam",       alert_level: "high",   vi: "Cấm quay đầu" }
+  4: { qcvn: "P.104",  group: "cam",       alert_level: "high",   vi: "Cấm xe mô tô / gắn máy" }
+  5: { qcvn: "R.301a", group: "hieu_lenh", alert_level: "medium", vi: "Hướng đi thẳng phải theo" }
+  6: { qcvn: "R.303",  group: "hieu_lenh", alert_level: "medium", vi: "Hướng phải đi theo vòng xuyến" }
+  7: { qcvn: "P.127",  group: "toc_do",    alert_level: "medium", vi: "Tốc độ tối đa 40 km/h" }
+  8: { qcvn: "P.127",  group: "toc_do",    alert_level: "medium", vi: "Tốc độ tối đa 50 km/h" }
+  9: { qcvn: "P.127",  group: "toc_do",    alert_level: "medium", vi: "Tốc độ tối đa 60 km/h" }
+  10: { qcvn: "W.209", group: "canh_bao",  alert_level: "medium", vi: "Giao nhau có tín hiệu đèn" }
+  11: { qcvn: "W.245", group: "canh_bao",  alert_level: "high",   vi: "Đi chậm" }
+

@@ -8,7 +8,47 @@
 Thumbs.db
 desktop.ini
 
-# Python cache
+# Virtual environments & secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Jupyter Notebook checkpoints & Python cache
+.ipynb_checkpoints/
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
+
+# Heavy datasets & augmentation outputs (store on Google Drive / Roboflow)
+01_dataset/raw/
+01_dataset/images/
+01_dataset/labels/
+01_dataset/train/
+01_dataset/val/
+01_dataset/test/
+!01_dataset/mock_assets/
+!01_dataset/mock_assets/**
+02_augmentation/outputs/
+
+# Heavy model checkpoints & training runs (keep compact INT8 .tflite / .h stubs)
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+03_models_benchmark/runs/
+03_models_benchmark/mock_outputs/
+saved_model/
+runs/
+weights/
+
+# Embedded build artifacts (PlatformIO / Arduino / ESP-IDF)
+.pio/
+05_firmware_esp32s3/**/build/
+05_firmware_esp32s3/**/managed_components/
+sdkconfig
+sdkconfig.old

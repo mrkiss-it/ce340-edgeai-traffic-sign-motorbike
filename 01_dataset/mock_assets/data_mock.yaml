@@ -1,0 +1,21 @@
+# Cấu hình YOLO smoke-test dùng chung cho [K2] và [T2] với bộ 5 ảnh Mock Stub
+path: .
+train: images
+val: images
+test: images
+
+nc: 12
+names:
+  0: cam_di_nguoc_chieu
+  1: cam_re_trai
+  2: cam_re_phai
+  3: cam_quay_dau
+  4: cam_xe_mo_to
+  5: huong_di_thang
+  6: vong_xuyen
+  7: toc_do_40
+  8: toc_do_50
+  9: toc_do_60
+  10: giao_nhau_den_tin_hieu
+  11: di_cham
+

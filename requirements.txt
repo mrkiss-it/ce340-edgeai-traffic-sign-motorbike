@@ -1,0 +1,40 @@
+# ==============================================================================
+# CE340 — Trí tuệ nhân tạo cho Hệ thống nhúng
+# Đề tài: Nhận diện biển báo giao thông VN cho xe máy (Edge AI & TinyML)
+# Yêu cầu: Python 3.10+ (tương thích máy cá nhân và Google Colab GPU)
+# Cài đặt: pip install -r requirements.txt
+# ==============================================================================
+
+# --- Xử lý ảnh, cấu hình & trực quan hóa (Tất cả thành viên) ---
+numpy>=1.26.0,<2.1.0
+pillow>=10.0.0
+opencv-python>=4.8.0
+pyyaml>=6.0.1
+matplotlib>=3.8.0
+seaborn>=0.13.0
+pandas>=2.1.0
+tqdm>=4.66.0
+
+# --- Thu thập & Tăng cường dữ liệu thời tiết phức tạp (01_dataset, 02_augmentation) ---
+albumentations>=1.4.0
+scikit-learn>=1.4.0
+
+# --- Huấn luyện & Benchmark mô hình (03_models_benchmark) ---
+torch>=2.1.0
+torchvision>=0.16.0
+ultralytics>=8.2.0
+
+# --- Tối ưu hóa TinyML: Pruning & Quantization INT8 (04_tinyml_optimization) ---
+# Lưu ý: Tách riêng 2 luồng Pruning:
+#   - Luồng TF/Keras (MobileNetV2-SSD): dùng tensorflow-model-optimization (tfmot)
+#   - Luồng PyTorch (YOLOv8n/YOLOv5): dùng torch.nn.utils.prune -> onnx -> onnx2tf -> TFLite INT8
+tensorflow>=2.10.0,<2.18.0
+tensorflow-model-optimization>=0.7.5
+onnx>=1.15.0
+onnxruntime>=1.17.0
+# onnx2tf>=1.20.0   # Cài trên Colab/Linux khi convert PyTorch ONNX -> TFLite INT8
+
+# --- Notebook & kiểm thử ---
+ipykernel>=6.29.0
+jupyter>=1.0.0
+
