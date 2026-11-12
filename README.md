@@ -17,8 +17,8 @@
 | 1 | **Trần Hoàng Hôn** | `26410046` | **Trưởng nhóm / PM & QA** | Quản trị dự án (Agile WBS), kiểm soát chất lượng bàn giao (DoD), thiết kế kiến trúc nhúng, tối ưu hóa giao tiếp ngoại vi (OLED, Buzzer) và điều phối báo cáo |
 | 2 | **Nguyễn Duy Khang** | `26410055` | **Kỹ sư Dữ liệu** | Thu thập và gán nhãn dataset biển báo Việt Nam (QCVN 41:2019); xây dựng pipeline tăng cường dữ liệu thời tiết phức tạp (mưa, mờ, che khuất) |
 | 3 | **Phạm Thành Trung** | `26410141` | **Kỹ sư AI** | Huấn luyện đa mô hình học sâu (YOLOv8n, YOLOv5-tiny, MobileNetV2-SSD); đo lường và benchmark so sánh hiệu năng (`Precision`, `Recall`, `mAP@0.5`) |
-| 4 | **Vũ Văn Duy** | `26410031` | **Kỹ sư Tối ưu hóa (TinyML)** | Thực hiện kỹ thuật cắt tỉa (Pruning) và lượng tử hóa sau huấn luyện (Post-Training Quantization INT8) trên TensorFlow Lite/ONNX |
-| 5 | **Hoàng Cao Sơn** | `25730061` | **Kỹ sư Nhúng & Thực nghiệm** | Triển khai nạp mô hình nén INT8 lên phần cứng thật (ESP32-S3), thi công hộp mạch bảo vệ gắn ghi-đông xe máy và đo đạc thông số thực tế (FPS, Latency, dòng điện mA) |
+| 4 | **Vũ Văn Duy** | `26410031` | **Kỹ sư Nhúng & Thực nghiệm** | Triển khai nạp mô hình nén INT8 lên phần cứng thật (ESP32-S3), thi công hộp mạch bảo vệ gắn ghi-đông xe máy và đo đạc thông số thực tế (FPS, Latency, dòng điện mA) |
+| 5 | **Hoàng Cao Sơn** | `25730061` | **Kỹ sư Tối ưu hóa (TinyML)** | Thực hiện kỹ thuật cắt tỉa (Pruning) và lượng tử hóa sau huấn luyện (Post-Training Quantization INT8) trên TensorFlow Lite/ONNX |
 
 ---
 
